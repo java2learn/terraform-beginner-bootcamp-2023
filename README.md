@@ -28,3 +28,40 @@ Init is run only when you started the workspace for the first time.
 So use init only for heavy lifting items like downloading libraries which are initially required to setup workspace.
 
 GitPod Lifecycle: [https://www.gitpod.io/docs/configure/workspaces/tasks]
+
+###Setting Environment variables to set to PROJECT_ROOT to use in bash scripts.
+
+**env** gives all the environment variables set to our environment
+
+```
+env | grep HOST
+```
+
+To print environment variable
+```
+Echo $PROJECT_ROOT
+```
+
+There are different ways to set Environment variables in bash script:
+
+	1. ```sh
+	PROJECT_ROOT="/path/workspace"
+
+	cd PROJECT_ROOT
+	```
+
+
+	2. export PROJECT_ROOT="/path/workspace"
+
+	```sh
+	cd PROJECT_ROOT
+	```
+
+	3. PROJECT_ROOT="/path/workspace" ./script_to_run
+
+To persist in gitpod you can use the below :
+```
+gp env PROJECT_ROOT="/path/workspace"
+```
+
+We can also set non sensitive env vars in '.gitpod.yml' file
