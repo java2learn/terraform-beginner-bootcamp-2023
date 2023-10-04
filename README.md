@@ -57,16 +57,19 @@ There are different ways to set Environment variables in bash script:
 	cd PROJECT_ROOT
 	```
 
-	3. PROJECT_ROOT="/path/workspace" ./script_to_run
+	3. ```bash
+ 		PROJECT_ROOT="/path/workspace" ./script_to_run
+   	   ```
 
 To persist in gitpod you can use the below :
-```
+
+```bash
 gp env PROJECT_ROOT="/path/workspace"
 ```
 
 We can also set non sensitive env vars in '.gitpod.yml' file
 
-### AWS CLI installation
+## AWS CLI installation
 
 AWS CLI is installed via bash script (./install_aws_cli) [./install_aws_cli]
 
@@ -85,7 +88,7 @@ aws sts get-caller-identity
 If it is successful you should see something like 
 ```json
 {
-	"UserId": "AIDAA2FFP3S35A4WJHP4H",
+    "UserId": "AIDAA2FFP3S35A4WJHP4H",
     "Account": "123456778775",
     "Arn": "arn:aws:iam::123456778775:user/terraform-beginner-bootcamp"
 }
