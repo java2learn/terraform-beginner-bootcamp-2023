@@ -65,3 +65,31 @@ gp env PROJECT_ROOT="/path/workspace"
 ```
 
 We can also set non sensitive env vars in '.gitpod.yml' file
+
+### AWS CLI installation
+
+AWS CLI is installed via bash script (./install_aws_cli) [./install_aws_cli]
+
+[Getting started with installing AWS CLI] (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+We need to set env vars for AWS CLI
+
+(AWS CLI env vars setup) [https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html]
+
+We can check our aws credentials are set correctly using
+
+```sh
+aws sts get-caller-identity
+```
+
+If it is successful you should see something like 
+```json
+{
+	"UserId": "AIDAA2FFP3S35A4WJHP4H",
+    "Account": "123456778775",
+    "Arn": "arn:aws:iam::123456778775:user/terraform-beginner-bootcamp"
+}
+```
+
+Setup IAM user in AWS account and generate aws cli credentials 
+
