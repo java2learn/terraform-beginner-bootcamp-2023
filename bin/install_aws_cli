@@ -12,4 +12,4 @@ sudo ./aws/install
 
 aws sts get-caller-identity
 
-cd $PROJECT_ROOT
+cd PROJECT_ROOT
